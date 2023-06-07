@@ -84,3 +84,49 @@ textarea {
 .submitForm:hover {
   cursor: pointer;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f8fa;
+}
+
+.post {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid #e1e8ed;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  color: #14171a;
+  font-family: "Helvetica Neue", Roboto, Arial, sans-serif;
+  width: 600px; /*adjust this to your layout*/
+  box-sizing: border-box;
+}
+
+.post > div {
+  margin-right: 20px;
+}
+
+.post-title {
+  font-size: 15px;
+}
+
+.post-description {
+  font-size: 15px;
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+
+.post-username {
+  font-size: 15px;
+  color: #657786;
+}
+
+.post-likebutton {
+  font-size: 15px;
+  color: #1da1f2; /* twitter blue color */
+}

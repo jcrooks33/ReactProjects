@@ -85,20 +85,24 @@ export const Post = (props: Props) => {
   }, []);
 
   return (
-    <div>
-      <div className="title">
-        <h1> {post.title} </h1>
-      </div>
-      <div className="body">
-        <p> {post.description} </p>
-      </div>
-      <div className="footer">
-        <p> @{post.username} </p>
-        <button onClick={hasUserLiked ? removeLike : addLike}>
-          {" "}
-          {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}{" "}
-        </button>
-        {likes && <p> Likes: {likes?.length} </p>}
+    <div className="wrapper">
+      <div className="parent post">
+        <div className="child post-title">
+          <h1> {post.title} </h1>
+        </div>
+
+        <div className="child post-description">
+          <p> {post.description} </p>
+        </div>
+        <div className="child post-username">
+          <p> @{post.username} </p>
+        </div>
+        <div className="child post-likebutton">
+          <button onClick={hasUserLiked ? removeLike : addLike}>
+            {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}{" "}
+          </button>
+          {likes && <p> Likes: {likes?.length} </p>}
+        </div>
       </div>
     </div>
   );
